@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script>
+    // 120 квартир поъезда (по 30 квартир) 6 этажей по 5-ть квартир на этаже
+	// вводим номер квартиры получаем ответ в каком парадном она находится 
+	// вводим номер квартиры получаем ответ в каком парадном и этаж где она находится
+    
+
+    var floors = 6; //  кол-во этажей
+
+    var porches = 4; // число подъездов
+
+    var apartmentsPerFloor = 5; // квартир на этаж
+
+    var apartment = parseInt(prompt("Введите номер квартиры, от 1 до 120")); // номер квартиры
+
+    // этаж относительно дома
+    var floor = Math.ceil(apartment / apartmentsPerFloor);
+  
+    // подъезд относительно дома.
+    var porch = Math.ceil(floor / floors);   
+
+    // этаж относительно подъезда
+    floor -= (porch - 1) * floors;
+ 
+    alert("Квартира с номером " + apartment + " находится в подъезде № " + porch + " на " + floor + " этаже");
+      
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
